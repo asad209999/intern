@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Featured Products</h1>
+    <div class="grid">
+        <% products.forEach(p => { %>
+            <div class="card">
+                <img src="<%= p.image %>" alt="<%= p.name %>">
+                <h2><%= p.name %></h2>
+                <p>$<%= p.price %></p>
+                <a href="/products/<%= p._id %>">View Details</a>
+            </div>
+        <% }) %>
+    </div>
+</body>
+</html>
